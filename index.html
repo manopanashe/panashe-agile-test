@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panashe Agile test Entry</title>
+</head>
+<style>
+    html,body{
+        padding: 0;
+         margin: 0;
+    }
+    .container {
+  background: url("/bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: auto; 
+
+}
+
+.column_1{
+background-image:url('/col_bg.png');
+background-size: contain;
+background-position: left;
+background-repeat: no-repeat;
+width: 336.0232543945312px;
+height: 550px;
+top: 872.0232543945312px;
+left: 33px;
+
+}
+
+
+</style>
+<body id="root"></body>
+<script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
+<script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
+<script src="https://unpkg.com/@babel/standalone@7.8.3/babel.js"></script>
+
+<script src="https://cdn.tailwindcss.com"></script>
+<script type="text/babel">
+const features = (
+    <>
+        <div className=' container bg-black min-h-screen'>
+            <div class="grid grid-rows-3 grid-flow-col gap-4 text-white">
+                <div class="row-span-3 column_1">01</div>
+                <div class="col-span-2 ...">02</div>
+                <div class="row-span-2 col-span-2">
+                   <p className='transform -rotate-90'> HEAR <br/> LATEST <br/> SEE <br /> SHOP <br/> WATCH <br/> PERSONAL <br/>AID
+                    </p>
+                    </div>
+            </div>
+        </div>
+    </>    
+)
+
+ReactDOM.render(features,document.getElementById('root'))
+</script>
+</html>
