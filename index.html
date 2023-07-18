@@ -10,14 +10,11 @@
         padding: 0;
          margin: 0;
     }
-    .container {
-  background: url("/bg.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: auto; 
 
+
+.cotainer{
+    padding: 0px;
+    margin: 0px;
 }
 
 .column_1{
@@ -31,6 +28,25 @@ top: 872.0232543945312px;
 left: 33px;
 
 }
+.column_2{
+    height: 550px;
+}
+
+@font-face{
+    font-family: Anton;
+    src: url(/Anton/Anton-Regular.ttf);
+}
+#root {
+  background: url("/bg.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  /* width: 100%;
+  height: auto;  */
+  font-family: Anton;
+
+}
+
 
 
 </style>
@@ -42,18 +58,23 @@ left: 33px;
 <script src="https://cdn.tailwindcss.com"></script>
 <script type="text/babel">
 const features = (
-    <>
-        <div className=' container bg-black min-h-screen'>
-            <div class="grid grid-rows-3 grid-flow-col gap-4 text-white">
-                <div class="row-span-3 column_1">01</div>
-                <div class="col-span-2 ...">02</div>
-                <div class="row-span-2 col-span-2">
-                   <p className='transform -rotate-90'> HEAR <br/> LATEST <br/> SEE <br /> SHOP <br/> WATCH <br/> PERSONAL <br/>AID
-                    </p>
+        <div className='container min-h-screen p-0'>
+            <div className="grid grid-rows-1 grid-flow-col gap-4 text-[#E8E8E8]">
+                <div className="row-span-1 col-span-1 column_1 "></div>
+
+                <div className="row-span-3 col-span-2 text-left transform -rotate-90 font-extrabold text-7xl leading-relaxed mr-40 tracking-widest">
+                   <p>HEAR</p> 
+                   <p>LATEST</p>
+                   <p>SEE</p> 
+                   <p>SHOP</p>
+                   <p>WATCH</p>
+                   <p>PERSONAL</p>
+                   <p>AID</p>
+                 
                     </div>
             </div>
         </div>
-    </>    
+     
 )
 
 ReactDOM.render(features,document.getElementById('root'))
