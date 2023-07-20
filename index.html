@@ -1,55 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Panashe Agile test Entry</title>
 </head>
 <style>
-    html,body{
+    html,
+    body {
         padding: 0;
-         margin: 0;
+        margin: 0;
     }
 
+    .cotainer {
+        padding: 0px;
+        margin: 0px !important;
+    }
+    .grid{
+        min-height: 100vh;
+    }
+    .column_1 {
+        background-image: url('/col_bg.png');
+        background-size: contain;
+        background-position: left;
+        background-repeat: no-repeat;
+        min-width:100vh;
+        min-height:100vh;
+        top: 872.0232543945312px;
+        left: 33px;
 
-.cotainer{
+    }
+
+    @font-face {
+        font-family: Anton;
+        src: url(/Anton/Anton-Regular.ttf);
+    }
+
+    #root {
+        background: url("/bg.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+        min-width: 100vh;
+        font-family: Anton;
+
+    }
+
+ 
+@media (max-width: 1024px) {
+    #root {
+        background: url("/bg.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+        min-width: 100vh;
+        font-family: Anton;
+
+    }
+  .grid {
+    min-height: 100vh;
+    min-width: 100%;
+  }
+
+  .cotainer {
     padding: 0px;
-    margin: 0px;
-}
+    margin: 0px !important;
+  }
 
-.column_1{
-background-image:url('/col_bg.png');
-background-size: contain;
-background-position: left;
-background-repeat: no-repeat;
-width: 336.0232543945312px;
-height: 550px;
-top: 872.0232543945312px;
-left: 33px;
+  .column_1 {
+    min-height: 100vh;
+  }
 
-}
-.column_2{
-    height: 550px;
-}
-
-@font-face{
-    font-family: Anton;
-    src: url(/Anton/Anton-Regular.ttf);
-}
-#root {
-  background: url("/bg.png");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  /* width: 100%;
-  height: auto;  */
-  font-family: Anton;
-
+  .column_2 {
+    transform: rotate(-90deg);
+    font-size: 2.5rem;
+    line-height: 1.2;
+    left: 43px;
+    bottom: -90px;
+    position: absolute;
+  }
 }
 
 
+   @media (min-width: 768px)  {
+    #root {
+        background: url("/bg.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+        min-width: 100vh;
+        font-family: Anton;
 
+    }
+        .grid {
+            min-height: 100vh;
+            min-width: 100%;
+        }
+
+        .cotainer {
+            padding: 0px;
+            margin: 0px;
+        }
+        .column_1 {
+    min-height: 100vh;
+  }
+        .column_2 {
+            transform: rotate(-90deg);
+            left: 1px !important; 
+
+        }
+
+      
+    }
+
+    @media (min-width: 640px){ 
+        #root {
+        background: url("/bg.png");
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+        min-width: 100vh;
+        font-family: Anton;
+
+    }
+
+        .grid {
+            min-height: 100vh;
+            min-width: 100%;
+        }
+
+        .cotainer {
+            padding: 0px;
+            margin: 0px;
+        }
+        .column_1 {
+    min-height: 100vh;
+  }
+
+        .column_2 {
+            transform: rotate(-90deg);
+            left: 20px;
+        }
+    } 
 </style>
+
 <body id="root"></body>
 <script src="https://unpkg.com/react@16.12.0/umd/react.development.js"></script>
 <script src="https://unpkg.com/react-dom@16.12.0/umd/react-dom.development.js"></script>
@@ -57,26 +156,28 @@ left: 33px;
 
 <script src="https://cdn.tailwindcss.com"></script>
 <script type="text/babel">
-const features = (
-        <div className='container min-h-screen p-0'>
-            <div className="grid grid-rows-1 grid-flow-col gap-4 text-[#E8E8E8]">
-                <div className="row-span-1 col-span-1 column_1 "></div>
+    const features = (
+        <div className="container min-h-screen p-0 m-0 relative min-w-screen">
+            <div className="grid grid-cols-2 text-[#b6b4b4]">
+                <div className="column_1 left-[33px] ml-4"></div>
+                <div className="relative z-10 bottom-0 min-w-screen">
+                    <div className="column_2 text-left transform -rotate-90 absolute xl:-bottom-[260px] xl:left-[110px] xl:text-7xl xl:leading-relaxed z-10 xl:stracking-widest min-w-screen md:text-5xl md:leading-snug md:-bottom-[123px] sm:leading-none sm:-bottom-[63px] sm:-left-[52px]">
+                        <p className="hear">HEAR</p>
+                        <p>LATEST</p>
+                        <p>SEE</p>
+                        <p>SHOP</p>
+                        <p>WATCH</p>
+                        <p>PERSONAL</p>
+                        <p>AID</p>
 
-                <div className="row-span-3 col-span-2 text-left transform -rotate-90 font-extrabold text-7xl leading-relaxed mr-40 tracking-widest">
-                   <p>HEAR</p> 
-                   <p>LATEST</p>
-                   <p>SEE</p> 
-                   <p>SHOP</p>
-                   <p>WATCH</p>
-                   <p>PERSONAL</p>
-                   <p>AID</p>
-                 
                     </div>
+                </div>
             </div>
         </div>
-     
-)
 
-ReactDOM.render(features,document.getElementById('root'))
+    )
+
+    ReactDOM.render(features, document.getElementById('root'))
 </script>
+
 </html>
